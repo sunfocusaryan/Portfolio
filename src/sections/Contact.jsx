@@ -1,13 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { toast } from 'react-toastify';
 
 const Contact = () => {
     
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
-    alert("Message sent! (Simulation)");
+    // alert("Message sent! (Simulation)");
+     toast.success("Message sent! (Simulation)");
   };
 
   return (
@@ -108,8 +110,9 @@ const Contact = () => {
                         ></textarea>
                     </div>
                     <button 
+                    onSubmit={handleSubmit}
                         type="submit"
-                        className="w-full bg-cyan-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-cyan-600 transition-colors flex items-center justify-center space-x-2"
+                        className="cursor-pointer w-full bg-cyan-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-cyan-600 transition-colors flex items-center justify-center space-x-2"
                     >
                         <span>Send Message</span>
                         <Send size={18} />
