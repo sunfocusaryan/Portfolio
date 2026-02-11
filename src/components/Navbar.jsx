@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { useState } from 'react';
+import { Menu, X, Github, Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -12,7 +12,7 @@ const Navbar = () => {
     { name: 'Projects', href: '/projects' },
     { name: 'Contact', href: '/contact' },
   ];
-
+console.log(navLinks,"hjbjb");
   return (
     <nav className="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
